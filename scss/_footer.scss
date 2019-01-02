@@ -1,0 +1,36 @@
+footer {
+  clear: both;
+	background-color: $main-color;
+  color: $bright;
+  padding: 1rem 10px;
+  text-align: center;
+		@media (min-width: 750px)	{
+			text-align: left;
+		}
+
+  div {
+  	margin: 0 auto;
+  }
+
+  p {
+  	margin: 5px;
+  }
+
+  .soc-media {
+  	a {
+		color: $bright;
+		text-decoration: none;
+		margin: 5px;
+		//font-size: 1.25em;
+
+		&:hover, &:focus {
+			color: $light-color;
+		}
+	}
+
+		@media (min-width: 750px)	{
+			float: right;
+		}
+
+  }
+}

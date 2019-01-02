@@ -1,0 +1,165 @@
+// header styles including nav
+
+header {
+	position: fixed;
+	z-index: 10;
+	min-height: 100px;
+	background-color: $main-color;
+	padding: 10px 0 0;
+	//margin-bottom: 100px;
+	color: $bright;
+	font-weight: 700;
+
+	a:hover {
+		color: $light-color;
+	}
+
+	.logo {
+		float: left;
+		position: fixed;
+			top: -20px;
+			left: -30px;
+		max-width: 50%;
+	}
+
+	.searchform {
+		float: right;
+		padding: 0 10px;
+		margin-bottom: 0;
+		color: $dark;
+	}
+
+	.searchsubmit {
+		font-family: 'FontAwesome';
+		border: none;
+		 font-size: 1.5rem;
+		 padding: 0 5px;
+		 color: $bright;
+}
+
+// nav styles
+
+nav, .slicknav_menu {
+	clear: right;
+	float: right;
+	//position: fixed;
+}
+	//mobile menu
+	.slicknav_menu {
+		display:block;
+		background: inherit;
+		//float: right;
+		text-align: right;
+		padding: 0 10px;
+
+		.slicknav_menutxt {
+		    font-weight: inherit;
+		    text-shadow: none;
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+			//padding: 10px;
+		}
+
+		@media (min-width: 750px) {
+			display:none;
+		}
+	}
+
+	.slicknav_nav .slicknav_row:hover, .slicknav_nav a:hover {
+		background: inherit;
+		color: $light-color;
+	}
+
+	.slicknav_btn {
+			background-color: inherit;
+			text-shadow: none;
+			//padding: 0 10px;
+			padding: .24rem 1rem 1rem;
+			margin-bottom: 0;
+			margin-top: 0;
+
+			&:hover, &:focus,
+			&:hover span, &:focus span, 
+			&:hover span .slicknav_icon span:hover, &:focus span .slicknav_icon span {
+				color: $light-color;
+			}
+		}
+
+	/* #menu is the full menu */
+	#menu {
+		display:none;
+		@media (min-width: 750px) {
+			display: block;			
+			list-style: none;
+			padding: 0 10px;
+			margin-bottom: 0;
+			background-color: $main-color;
+			width: 100%;
+	
+			li {
+			  display: inline-block;
+			  position: relative;
+			  margin: 0;
+
+			  // The CSS to hide the sub menus.
+				ul { display: none; margin: 0;}
+
+				a {
+				  display: block;
+				  padding: .24rem 1rem 1rem;
+				  text-decoration: none;
+				  white-space: nowrap;
+
+				  :hover { color: $light-color;}
+				}
+			}
+
+				 li:hover > ul {
+				  display: block;
+				  position: absolute;
+				  background-color: inherit;
+				}
+				 
+				li:hover li { float: none; }
+				 
+				li:hover a { 
+					background: $main-color;
+				}
+				 
+				li:hover li a:hover { 
+					background: $main-color; }
+				 
+				li ul li { 
+					border-top: 0;
+					width: 100%; 
+				}
+				
+				// clearfix
+				ul:before,
+				ul:after {
+				  content: " "; /* 1 */
+				  display: table; /* 2 */
+				}
+				 
+				ul:after { clear: both; }
+
+				li:before{
+				    content: '';
+				    display: block;
+				    margin: auto;
+				    margin-top: -3px;
+				    height: 3px;
+				    width: 0px;
+				    background: inherit;
+				    transition: width .5s ease, background-color .5s ease;
+				}
+				li:hover:before {
+				    width: 100%;
+				    background: $light-color;
+				}
+		 }
+	}
+}

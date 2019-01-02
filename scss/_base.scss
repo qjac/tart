@@ -1,0 +1,65 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font;
+
+
+	.container {
+		max-width: none;
+		padding: 0;
+		@media (min-width: 400px) {
+			width: 100%;
+		}
+
+		@media (min-width: 550px) {
+			width: 100%;
+		}
+
+	}
+	a {
+		color: inherit;
+
+		&:hover {
+			color:$main-color;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $h-font;
+		margin-top: 2rem;
+		text-align: center;
+			a {
+				text-decoration: none;
+			}		
+			a:after {
+			content: '';
+			display: block;
+			height: 2px;
+			width: 0;
+			margin: 0 auto;
+			background: transparent;
+			transition: width .5s ease, background-color .5s ease;
+			}
+			a:hover:after {
+			width: 80%;
+			background: $light-color;
+			}
+}
+
+	p {
+		margin-bottom: 1.5rem;
+	}
+
+	hr {
+		width: 60%;
+		border-top: 2px solid $main-color;
+	}
+
+	td h6 {
+		margin: 0;
+		text-align: left;
+	}
+	
+}

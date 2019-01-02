@@ -1,0 +1,122 @@
+main {
+
+	.hero {
+		position: relative;
+		width: 100%;
+		height: 240px;
+		margin-top: 90px;
+		background: url(../images/home.jpg) no-repeat center center; 
+		background-size: cover;
+	}
+
+	.hero h2 {
+		position: absolute;  
+   	bottom: 20px;
+   	left: 20px;
+	}
+
+	section {
+		padding: 0 20px;
+	}
+	.row {
+		border-bottom: none;
+		max-width: 800px;
+		margin: 0 auto;
+
+		@media (min-width: 750px) {
+			border-bottom: 3px double lighten($dark, 80%);
+
+			.no-divide {
+				border-bottom: none;
+			}
+		}
+	}
+
+	section div {
+		margin: 10px auto;
+		width: 100%;
+		max-width: 400px;
+		padding: 10px 20px;
+		border-bottom: 3px double lighten($dark, 80%);
+
+		@media (min-width: 750px) {
+			border-bottom: none;
+			margin: 10px auto;
+		}
+	}
+
+	section div img {
+			display: block;
+			width: 100%;
+			max-width: 300px;
+			margin: 0 auto;
+		}
+
+	section .stack-up {	
+			@media (min-width: 750px) {
+				width: calc(100%/2);
+				float: left;
+			}
+	}
+
+	section .no-divide {
+		border-bottom: none;
+		@media (min-width: 750px) {
+			
+		}
+	}
+
+	// connect page
+	.connect {
+		div {
+			width: 100%;
+		}
+
+		h3 {
+			//padding: 2rem auto 0.5rem;
+			//text-align: center;
+		}
+
+		.soc-media {
+			text-align: center;
+			a {
+				padding: 0 10px;
+				text-decoration: none;
+			}
+		}
+
+		#contact-area {
+				width: 100%;
+				max-width: 800px;
+				margin-top: 0;
+			}
+
+			#contact-area input, #contact-area textarea {
+				padding: 5px;
+				width: 100%;
+				margin: 0px 0px 10px 0px;
+				border: 2px solid lighten($dark, 80%);
+			}
+
+			#contact-area textarea {
+				height: 2rem;
+			}
+
+			#contact-area textarea:focus, #contact-area input:focus {
+				border: 2px solid $main-color;
+			}
+
+			#contact-area input.submit-button {
+				width: 100px;
+				float: right;
+			}
+
+			label {
+				float: left;
+				width: 100px;
+				padding-top: 5px;
+				font-size: 2rem;
+			}
+	} // end connect page styles
+
+} // end main
